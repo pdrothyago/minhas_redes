@@ -54,7 +54,6 @@
             position: relative;
             overflow: hidden;
             animation: pulse 2s infinite;
-            cursor: pointer;
         }
 
         @keyframes pulse {
@@ -203,7 +202,7 @@
             width: 40px;
             height: 40px;
             cursor: pointer;
-            display: flex;
+            display: none; /* Inicialmente oculto */
             align-items: center;
             justify-content: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -353,7 +352,7 @@
             </svg>
         </button>
 
-        <div class="profile-image" onclick="openEditModal()">
+        <div class="profile-image" ondblclick="checkEditAccess()">
             <img id="profileImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23e0e0e0'/%3E%3Ccircle cx='60' cy='45' r='20' fill='%23bbb'/%3E%3Cpath d='M60 75c-15 0-25 10-25 15v10h50v-10c0-5-10-15-25-15z' fill='%23bbb'/%3E%3C/svg%3E" alt="Pedro Thyago Gomes">
         </div>
         
@@ -438,7 +437,16 @@
             medium: "https://medium.com/@pedrothyagogomes"
         };
 
-        // Carregar dados salvos
+        // Verificar acesso de edição
+        function checkEditAccess() {
+            const password = prompt('🔐 Digite a senha de administrador:');
+            if (password === 'pedro2025') { // MUDE ESTA SENHA!
+                document.querySelector('.edit-button').style.display = 'flex';
+                alert('✅ Modo de edição ativado!');
+            } else if (password !== null) {
+                alert('❌ Senha incorreta!');
+            }
+        }
         function loadSavedData() {
             try {
                 const saved = JSON.parse(localStorage.getItem('pedroProfileData') || 'null');
