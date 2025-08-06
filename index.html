@@ -206,7 +206,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="profile-image">
+        <div class="profile-image img">
             <img src="https://drive.google.com/file/d/14WpE6Jh4wd6VeJqS0DS2L3GtknlLp459/view?usp=drive_link width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23e0e0e0'/%3E%3Ccircle cx='60' cy='45' r='20' fill='%23bbb'/%3E%3Cpath d='M60 75c-15 0-25 10-25 15v10h50v-10c0-5-10-15-25-15z' fill='%23bbb'/%3E%3C/svg%3E" alt="Pedro Thyago Gomes">
         </div>
         
@@ -245,8 +245,28 @@
     </div>
 
     <script>
+<<<<<<< HEAD
+        // Dados padrão
+        let profileData = {
+            photo: "data:https://drive.google.com/file/d/14WpE6Jh4wd6VeJqS0DS2L3GtknlLp459/view?usp=sharing xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23e0e0e0'/%3E%3Ccircle cx='60' cy='45' r='20' fill='%23bbb'/%3E%3Cpath d='M60 75c-15 0-25 10-25 15v10h50v-10c0-5-10-15-25-15z' fill='%23bbb'/%3E%3C/svg%3E",
+            linkedin: "https://www.linkedin.com/in/eng-pedro-thyago-gomes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            github: "https://github.com/pdrothyago",
+            medium: "https://medium.com/@pedrothyagogomes"
+        };
+
+        // Verificar acesso de edição
+        function checkEditAccess() {
+            const password = prompt('🔐 Digite a senha de administrador:');
+            if (password === 'pedro2025') { // MUDE ESTA SENHA!
+                document.querySelector('.edit-button').style.display = 'flex';
+                alert('✅ Modo de edição ativado!');
+            } else if (password !== null) {
+                alert('❌ Senha incorreta!');
+            }
+=======
         function openLinkedIn() {
             window.open('https://www.linkedin.com/in/eng-pedro-thyago-gomes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank');
+>>>>>>> e9ad78edba8a9a7615c6c295f94ff27c901c1017
         }
         
         function openGitHub() {
