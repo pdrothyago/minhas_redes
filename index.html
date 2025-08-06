@@ -162,6 +162,17 @@
             box-shadow: 0 8px 25px rgba(0, 171, 108, 0.4);
         }
 
+        .whatsapp {
+            background: linear-gradient(45deg, #25d366, #1da851);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
         .icon {
             width: 20px;
             height: 20px;
@@ -191,169 +202,12 @@
             color: #888;
             font-size: 12px;
         }
-
-        .edit-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            display: none; /* Inicialmente oculto */
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .edit-button:hover {
-            background: white;
-            transform: scale(1.1);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: white;
-            margin: 15% auto;
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .modal-header {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #2c5aa0;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #4CAF50;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 25px;
-        }
-
-        .btn {
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-save {
-            background: #4CAF50;
-            color: white;
-        }
-
-        .btn-save:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-        }
-
-        .btn-cancel {
-            background: #f0f0f0;
-            color: #666;
-        }
-
-        .btn-cancel:hover {
-            background: #e0e0e0;
-        }
-
-        .file-input-wrapper {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .file-input {
-            position: absolute;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-        }
-
-        .file-input-display {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            background: white;
-            text-align: left;
-            cursor: pointer;
-            transition: border-color 0.3s ease;
-        }
-
-        .file-input-display:hover {
-            border-color: #4CAF50;
-        }
-
-        #imagePreview {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-top: 10px;
-            border: 2px solid #e0e0e0;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <button class="edit-button" onclick="openEditModal()" title="Editar">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-            </svg>
-        </button>
-
-        <div class="profile-image" ondblclick="checkEditAccess()">
-            <img id="profileImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23e0e0e0'/%3E%3Ccircle cx='60' cy='45' r='20' fill='%23bbb'/%3E%3Cpath d='M60 75c-15 0-25 10-25 15v10h50v-10c0-5-10-15-25-15z' fill='%23bbb'/%3E%3C/svg%3E" alt="Pedro Thyago Gomes">
+        <div class="profile-image">
+            <img src="data:https://drive.google.com/file/d/14WpE6Jh4wd6VeJqS0DS2L3GtknlLp459/view?usp=drive_link width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23e0e0e0'/%3E%3Ccircle cx='60' cy='45' r='20' fill='%23bbb'/%3E%3Cpath d='M60 75c-15 0-25 10-25 15v10h50v-10c0-5-10-15-25-15z' fill='%23bbb'/%3E%3C/svg%3E" alt="Pedro Thyago Gomes">
         </div>
         
         <h1 class="name">Pedro Thyago Gomes</h1>
@@ -363,21 +217,21 @@
         </p>
         
         <div class="social-links">
-            <a href="#" class="social-button linkedin" onclick="openSocialLink('linkedin')">
+            <a href="#" class="social-button linkedin" onclick="openLinkedIn()">
                 <svg class="icon" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
                 LinkedIn
             </a>
             
-            <a href="#" class="social-button github" onclick="openSocialLink('github')">
+            <a href="#" class="social-button github" onclick="openGitHub()">
                 <svg class="icon" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
                 GitHub
             </a>
             
-            <a href="#" class="social-button medium" onclick="openSocialLink('medium')">
+            <a href="#" class="social-button medium" onclick="openMedium()">
                 <svg class="icon" viewBox="0 0 24 24">
                     <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
                 </svg>
@@ -390,164 +244,18 @@
         </div>
     </div>
 
-    <!-- Modal de Edição -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">✏️ Editar Perfil</div>
-            
-            <div class="form-group">
-                <label for="photoInput">Foto de Perfil:</label>
-                <div class="file-input-wrapper">
-                    <input type="file" id="photoInput" class="file-input" accept="image/*" onchange="previewImage()">
-                    <div class="file-input-display">
-                        <span id="fileLabel">Clique para escolher uma foto</span>
-                    </div>
-                </div>
-                <img id="imagePreview" style="display: none;">
-            </div>
-            
-            <div class="form-group">
-                <label for="linkedinInput">LinkedIn URL:</label>
-                <input type="url" id="linkedinInput" placeholder="https://www.linkedin.com/in/seu-perfil">
-            </div>
-            
-            <div class="form-group">
-                <label for="githubInput">GitHub URL:</label>
-                <input type="url" id="githubInput" placeholder="https://github.com/seu-usuario">
-            </div>
-            
-            <div class="form-group">
-                <label for="mediumInput">Medium URL:</label>
-                <input type="url" id="mediumInput" placeholder="https://medium.com/@seu-usuario">
-            </div>
-            
-            <div class="button-group">
-                <button class="btn btn-save" onclick="saveChanges()">💾 Salvar</button>
-                <button class="btn btn-cancel" onclick="closeEditModal()">❌ Cancelar</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Dados padrão
-        let profileData = {
-            photo: "data:https://drive.google.com/file/d/14WpE6Jh4wd6VeJqS0DS2L3GtknlLp459/view?usp=sharing xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23e0e0e0'/%3E%3Ccircle cx='60' cy='45' r='20' fill='%23bbb'/%3E%3Cpath d='M60 75c-15 0-25 10-25 15v10h50v-10c0-5-10-15-25-15z' fill='%23bbb'/%3E%3C/svg%3E",
-            linkedin: "https://www.linkedin.com/in/eng-pedro-thyago-gomes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            github: "https://github.com/pdrothyago",
-            medium: "https://medium.com/@pedrothyagogomes"
-        };
-
-        // Verificar acesso de edição
-        function checkEditAccess() {
-            const password = prompt('🔐 Digite a senha de administrador:');
-            if (password === 'pedro2025') { // MUDE ESTA SENHA!
-                document.querySelector('.edit-button').style.display = 'flex';
-                alert('✅ Modo de edição ativado!');
-            } else if (password !== null) {
-                alert('❌ Senha incorreta!');
-            }
+        function openLinkedIn() {
+            window.open('https://www.linkedin.com/in/eng-pedro-thyago-gomes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank');
         }
-        function loadSavedData() {
-            try {
-                const saved = JSON.parse(localStorage.getItem('pedroProfileData') || 'null');
-                if (saved) {
-                    profileData = { ...profileData, ...saved };
-                    document.getElementById('profileImg').src = profileData.photo;
-                }
-            } catch (e) {
-                console.log('LocalStorage não disponível, usando dados padrão');
-            }
+        
+        function openGitHub() {
+            window.open('https://github.com/pdrothyago', '_blank');
         }
-
-        // Abrir modal de edição
-        function openEditModal() {
-            document.getElementById('editModal').style.display = 'block';
-            // Preencher campos com dados atuais
-            document.getElementById('linkedinInput').value = profileData.linkedin;
-            document.getElementById('githubInput').value = profileData.github;
-            document.getElementById('mediumInput').value = profileData.medium;
+        
+        function openMedium() {
+            window.open('https://medium.com/@pedrothyagogomes', '_blank');
         }
-
-        // Fechar modal
-        function closeEditModal() {
-            document.getElementById('editModal').style.display = 'none';
-            document.getElementById('imagePreview').style.display = 'none';
-            document.getElementById('fileLabel').textContent = 'Clique para escolher uma foto';
-        }
-
-        // Preview da imagem
-        function previewImage() {
-            const input = document.getElementById('photoInput');
-            const preview = document.getElementById('imagePreview');
-            const label = document.getElementById('fileLabel');
-            
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.style.display = 'block';
-                    label.textContent = input.files[0].name;
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        // Salvar alterações
-        function saveChanges() {
-            // Atualizar foto se uma nova foi escolhida
-            const photoInput = document.getElementById('photoInput');
-            if (photoInput.files && photoInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    profileData.photo = e.target.result;
-                    document.getElementById('profileImg').src = profileData.photo;
-                    finalizeSave();
-                };
-                reader.readAsDataURL(photoInput.files[0]);
-            } else {
-                finalizeSave();
-            }
-        }
-
-        function finalizeSave() {
-            // Atualizar URLs
-            profileData.linkedin = document.getElementById('linkedinInput').value || profileData.linkedin;
-            profileData.github = document.getElementById('githubInput').value || profileData.github;
-            profileData.medium = document.getElementById('mediumInput').value || profileData.medium;
-            
-            // Salvar no localStorage (se disponível)
-            try {
-                localStorage.setItem('pedroProfileData', JSON.stringify(profileData));
-            } catch (e) {
-                console.log('LocalStorage não disponível');
-            }
-            
-            // Fechar modal
-            closeEditModal();
-            
-            // Mostrar feedback
-            alert('✅ Perfil atualizado com sucesso!');
-        }
-
-        // Abrir link social
-        function openSocialLink(platform) {
-            if (profileData[platform]) {
-                window.open(profileData[platform], '_blank');
-            }
-        }
-
-        // Fechar modal ao clicar fora
-        window.onclick = function(event) {
-            const modal = document.getElementById('editModal');
-            if (event.target === modal) {
-                closeEditModal();
-            }
-        }
-
-        // Carregar dados ao inicializar
-        document.addEventListener('DOMContentLoaded', function() {
-            loadSavedData();
-        });
     </script>
 </body>
 </html>
