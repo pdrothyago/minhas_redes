@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            background: linear-gradient(135deg, #87CEEB 0%, #4682B4 50%, #1E90FF 100%);
+            background: linear-gradient(135deg, #02253d 0%, #1a3a5c 50%, #02253d 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -29,8 +29,9 @@
             width: 100%;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(2, 37, 61, 0.3);
             animation: fadeInUp 0.8s ease-out;
+            border: 2px solid #2ead16;
         }
 
         @keyframes fadeInUp {
@@ -49,7 +50,7 @@
             height: 120px;
             border-radius: 50%;
             margin: 0 auto 20px;
-            background: linear-gradient(45deg, #4CAF50, #45a049);
+            background: linear-gradient(45deg, #2ead16, #25a013);
             padding: 4px;
             position: relative;
             overflow: hidden;
@@ -58,10 +59,10 @@
 
         @keyframes pulse {
             0%, 100% {
-                box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+                box-shadow: 0 0 0 0 rgba(46, 173, 22, 0.4);
             }
             50% {
-                box-shadow: 0 0 0 20px rgba(76, 175, 80, 0);
+                box-shadow: 0 0 0 20px rgba(46, 173, 22, 0);
             }
         }
 
@@ -74,21 +75,22 @@
         }
 
         .name {
-            color: #2c5aa0;
+            color: #02253d;
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 10px;
-            border-bottom: 2px solid #4CAF50;
+            border-bottom: 2px solid #2ead16;
             padding-bottom: 10px;
             display: inline-block;
         }
 
         .title {
-            color: #666;
+            color: #02253d;
             font-size: 14px;
             margin-bottom: 30px;
             line-height: 1.4;
             font-weight: 500;
+            opacity: 0.8;
         }
 
         .social-links {
@@ -130,47 +132,55 @@
         }
 
         .linkedin {
-            background: linear-gradient(45deg, #0077b5, #005885);
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+            background: linear-gradient(45deg, #02253d, #1a3a5c);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(2, 37, 61, 0.3);
+            border: 2px solid #2ead16;
         }
 
         .linkedin:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+            box-shadow: 0 8px 25px rgba(2, 37, 61, 0.4);
+            background: linear-gradient(45deg, #2ead16, #25a013);
         }
 
         .github {
-            background: linear-gradient(45deg, #333, #24292e);
-            color: white;
-            box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+            background: linear-gradient(45deg, #02253d, #1a3a5c);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(2, 37, 61, 0.3);
+            border: 2px solid #2ead16;
         }
 
         .github:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4);
+            box-shadow: 0 8px 25px rgba(2, 37, 61, 0.4);
+            background: linear-gradient(45deg, #2ead16, #25a013);
         }
 
         .medium {
-            background: linear-gradient(45deg, #00ab6c, #008f5a);
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 171, 108, 0.3);
+            background: linear-gradient(45deg, #02253d, #1a3a5c);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(2, 37, 61, 0.3);
+            border: 2px solid #2ead16;
         }
 
         .medium:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 171, 108, 0.4);
+            box-shadow: 0 8px 25px rgba(2, 37, 61, 0.4);
+            background: linear-gradient(45deg, #2ead16, #25a013);
         }
 
         .whatsapp {
-            background: linear-gradient(45deg, #25d366, #1da851);
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            background: linear-gradient(45deg, #2ead16, #25a013);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(46, 173, 22, 0.3);
+            border: 2px solid #02253d;
         }
 
         .whatsapp:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 8px 25px rgba(46, 173, 22, 0.4);
+            background: linear-gradient(45deg, #02253d, #1a3a5c);
         }
 
         .icon {
@@ -198,9 +208,10 @@
         .footer {
             margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #888;
+            border-top: 1px solid #2ead16;
+            color: #02253d;
             font-size: 12px;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -213,7 +224,7 @@
         <h1 class="name">Pedro Thyago Gomes</h1>
         <p class="title">
             Sou Engenheiro de Exploração e Produção de Petróleo e Pós-graduando em Georreferenciamento, Geoprocessamento e Sensoriamento Remoto<br>
-            Transformo dados geográficos em soluções práticas para engenharia e mercado imobiliário
+            🎯 Transformo dados geográficos em soluções práticas para engenharia e mercado imobiliário
         </p>
         
         <div class="social-links">
